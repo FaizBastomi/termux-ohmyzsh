@@ -1,12 +1,6 @@
 # Termux-ohmyzsh
 
-A fork from [Cabbagec/termux-ohmyzsh](https://github.com/Cabbagec/termux-ohmyzsh). With my additional package and alias for `pkg`.
-
-- Package
-    - git
-    - zsh
-    - nodejs
-    - proot-distro
+A fork from [Cabbagec/termux-ohmyzsh](https://github.com/Cabbagec/termux-ohmyzsh). With my additional alias for `pkg`.
 
 - Alias
     - pkgin (same as `pkg install`)
