@@ -11,7 +11,7 @@ git clone https://github.com/Cabbagec/termux-ohmyzsh.git "$HOME/termux-ohmyzsh" 
 
 mv "$HOME/.termux" "$HOME/.termux.bak.$(date +%Y.%m.%d-%H:%M:%S)"
 cp -R "$HOME/termux-ohmyzsh/.termux" "$HOME/.termux"
-echo "${RED}Deleting motd...${NC}"
+echo -e "${RED}Deleting motd...${NC}"
 rm $HOME/../usr/etc/motd
 
 git clone git://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh" --depth 1
@@ -20,14 +20,14 @@ cp "$HOME/.oh-my-zsh/templates/zshrc.zsh-template" "$HOME/.zshrc"
 sed -i '/^ZSH_THEME/d' "$HOME/.zshrc"
 sed -i '1iZSH_THEME="agnoster"' "$HOME/.zshrc"
 
-echo "${GRN}Adding alias...${NC}"
+echo -e "${GRN}Adding alias...${NC}"
 echo "alias chcolor='$HOME/.termux/colors.sh'" >> "$HOME/.zshrc"
 echo "alias chfont='$HOME/.termux/fonts.sh'" >> "$HOME/.zshrc"
 echo "alias pkgin='pkg install'" >> "$HOME/.zshrc"
 echo "alias pkgrm='pkg uninstall'" >> "$HOME/.zshrc"
 echo "alias pkgcc='pkg clean'" >> "$HOME/.zshrc"
 echo "alias pkgup='pkg update -y'" >> "$HOME/.zshrc"
-echo "neofetch --ascii_distro 'Gentoo'"
+echo "neofetch --ascii_distro 'Gentoo'" >> "$HOME/.zshrc"
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1
 echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc"
