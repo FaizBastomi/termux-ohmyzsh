@@ -16,10 +16,10 @@ sed -i '1iZSH_THEME="agnoster"' "$HOME/.zshrc"
 
 echo "alias chcolor='$HOME/.termux/colors.sh'" >> "$HOME/.zshrc"
 echo "alias chfont='$HOME/.termux/fonts.sh'" >> "$HOME/.zshrc"
-echo "alias pkgin='pkg install' >> "$HOME/.zshrc"
-echo "alias pkgrm='pkg uninstall' >> "$HOME/.zshrc"
-echo "alias pkgcc='pkg clean' >> "$HOME/.zshrc"
-echo "alias pkgup='pkg update -y' >> "$HOME/.zshrc"
+echo "alias pkgin='pkg install'" >> "$HOME/.zshrc"
+echo "alias pkgrm='pkg uninstall'" >> "$HOME/.zshrc"
+echo "alias pkgcc='pkg clean'" >> "$HOME/.zshrc"
+echo "alias pkgup='pkg update -y'" >> "$HOME/.zshrc"
 
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1
