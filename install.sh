@@ -2,7 +2,7 @@
 termux-setup-storage
 
 apt update
-apt install -y git zsh
+apt install -y git zsh nodejs proot-distro
 git clone https://github.com/Cabbagec/termux-ohmyzsh.git "$HOME/termux-ohmyzsh" --depth 1
 
 mv "$HOME/.termux" "$HOME/.termux.bak.$(date +%Y.%m.%d-%H:%M:%S)"
@@ -13,8 +13,14 @@ mv "$HOME/.zshrc" "$HOME/.zshrc.bak.$(date +%Y.%m.%d-%H:%M:%S)"
 cp "$HOME/.oh-my-zsh/templates/zshrc.zsh-template" "$HOME/.zshrc"
 sed -i '/^ZSH_THEME/d' "$HOME/.zshrc"
 sed -i '1iZSH_THEME="agnoster"' "$HOME/.zshrc"
+
 echo "alias chcolor='$HOME/.termux/colors.sh'" >> "$HOME/.zshrc"
 echo "alias chfont='$HOME/.termux/fonts.sh'" >> "$HOME/.zshrc"
+echo "alias pkgin='pkg install' >> "$HOME/.zshrc"
+echo "alias pkgrm='pkg uninstall' >> "$HOME/.zshrc"
+echo "alias pkgcc='pkg clean' >> "$HOME/.zshrc"
+echo "alias pkgup='pkg update -y' >> "$HOME/.zshrc"
+
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1
 echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc"
