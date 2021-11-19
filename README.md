@@ -13,5 +13,5 @@ The README is same as [Cabbagec/termux-ohmyzsh](https://github.com/Cabbagec/term
 # Install
 
 ```sh
-sh -c "$(curl -fsSL https://github.com/FaizBastomi/termux-ohmyzsh/raw/master/install.sh)"
+bash -c "$(curl -fsSL https://github.com/FaizBastomi/termux-ohmyzsh/raw/master/install.sh)"
 ```
