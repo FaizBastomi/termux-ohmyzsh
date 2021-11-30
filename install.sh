@@ -11,7 +11,7 @@ apt install -y git zsh neofetch
 clear
 
 echo -e "${GRN}Cloning ${CY}termux-ohmyzsh${NC}"
-git clone https://github.com/Cabbagec/termux-ohmyzsh.git "$HOME/termux-ohmyzsh" --depth 1 --quiet
+git clone https://github.com/FaizBastomi/termux-ohmyzsh.git "$HOME/termux-ohmyzsh" --depth 1 --quiet
 
 echo -e "${GRN}Backup ${CY}.termux${GRN} folder${NC}"
 mv "$HOME/.termux" "$HOME/.termux.bak.$(date +%Y.%m.%d-%H:%M:%S)"
