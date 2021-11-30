@@ -42,7 +42,7 @@ echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HO
 
 chsh -s zsh
 
-echo -e "${GRN}oh-my-zsh${NC} ${GRN}install complete!\nChoose your color scheme now~"
+echo -e "${CY}oh-my-zsh ${GRN}install complete!\nChoose your color scheme now~${NC}"
 $HOME/.termux/colors.sh
 
 echo "Choose your font now~"
