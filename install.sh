@@ -8,6 +8,7 @@ NC='\033[0m'
 
 apt update
 apt install -y git zsh neofetch
+clear
 
 echo -e "${GRN}Cloning ${CY}termux-ohmyzsh${NC}"
 git clone https://github.com/Cabbagec/termux-ohmyzsh.git "$HOME/termux-ohmyzsh" --depth 1 --quiet
@@ -36,12 +37,12 @@ echo "alias pkgup='pkg update -y'" >> "$HOME/.zshrc"
 echo "neofetch --ascii_distro 'Gentoo'" >> "$HOME/.zshrc"
 
 echo -e "${GRN}Cloning ${CY}zsh-syntax-highlighting${NC}"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1 --quiet
 echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc"
 
 chsh -s zsh
 
-echo -e "${GRN}oh-my-zsh${NC} install complete!\nChoose your color scheme now~"
+echo -e "${GRN}oh-my-zsh${NC} ${GRN}install complete!\nChoose your color scheme now~"
 $HOME/.termux/colors.sh
 
 echo "Choose your font now~"
